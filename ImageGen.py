@@ -18,7 +18,7 @@ if(randomnum==0):
     cv.imshow('RGB',rgb)
     #cv.waitKey(0)
 
-#ramdonizing rectangles on black background
+#randomizing rectangles on black background
 elif(randomnum==1):
     img = np.zeros((xaxis,yaxis,3), np.uint8)
     
@@ -42,3 +42,11 @@ elif(randomnum==1):
         cv.rectangle(img,(xaxis1,xaxis2),(yaxis1,yaxis2),(color1,color2,color3),thickness)
         cv.imshow('shapes',img)
         #cv.waitKey(0)
+
+#pixalate image
+elif(randomnum==2):
+    print("Not yet implented - image pixalization")
+
+#drawing over image
+elif(randomnum==3):
+    print("Not yet implemented - image sketching")
