@@ -1,0 +1,10 @@
+Oct 10 2020
+Created repository, generated inital idea for project
+Initial commit for randomized color static image
+
+Oct 14 2020
+Initial commits for various image generation techniques including rectangle randomizer
+Outlined additional future image generation techinques such as pixalating image and drawing over image
+
+Oct 15 2020
+Began setting up Twitter API to allow scheduling of Tweeting images
