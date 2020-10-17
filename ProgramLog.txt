@@ -12,3 +12,9 @@ Oct 15 2020
 Began setting up Twitter API to allow scheduling of Tweeting images
 -----
 
+Oct 17 2020
+Framework set up for Tweeting images, it works! Next steps are to:
+	- get Instagram posting images too
+	- program maturity for image generation
+	- set up timer to Tweet images regularly (should only take a few minutes to do)
+-----
