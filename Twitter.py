@@ -8,6 +8,8 @@ twitter = Twython(
     access_token_secret
 )
 
-message = "Hello world!"
-twitter.update_status(status=message)
-print("Tweeted: %s" % message)
+def tweet_image(filename):
+    image = open(filename, 'rb')
+    response = twitter.upload_media(media=image)
+    media_id = [response['media_id']]
+    twitter.update_status(media_ids=media_id)

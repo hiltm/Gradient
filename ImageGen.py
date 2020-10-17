@@ -1,6 +1,11 @@
 import numpy as np
 import cv2 as cv
 import random
+from datetime import datetime
+from Twitter import tweet_image
+
+pathtosave = 'C:/Users/Hilt/Pictures/Gradient'
+now = datetime.now()
 
 xaxis=900
 yaxis=800
@@ -9,7 +14,7 @@ maxcolor=255
 
 #maximum number of image option
 maxoption=1
-randomnum=random.randint(0,maxoption)
+randomnum=1#random.randint(0,maxoption)
 print(randomnum)
 
 #completely randomized
@@ -42,6 +47,10 @@ elif(randomnum==1):
         cv.rectangle(img,(xaxis1,xaxis2),(yaxis1,yaxis2),(color1,color2,color3),thickness)
         cv.imshow('shapes',img)
         #cv.waitKey(0)
+    imagename= now.strftime("%d_%m_%Y_%H.%M.%S")+ '_randNum_' + str(randomnum)
+    filename=pathtosave + '/' + imagename + '.jpg'
+    print(filename)
+    cv.imwrite(filename, img)
 
 #pixalate image
 elif(randomnum==2):
@@ -50,3 +59,5 @@ elif(randomnum==2):
 #drawing over image
 elif(randomnum==3):
     print("Not yet implemented - image sketching")
+
+tweet_image(filename)
