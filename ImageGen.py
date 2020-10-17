@@ -1,11 +1,9 @@
 import numpy as np
 import cv2 as cv
 import random
-from Keys import *
 
 xaxis=900
 yaxis=800
-print(consumer_key)
 
 maxcolor=255
 
