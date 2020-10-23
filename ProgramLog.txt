@@ -19,3 +19,10 @@ Framework set up for Tweeting images, it works! Next steps are to:
 	- set up timer to Tweet images regularly (should only take a few minutes to do)
 	- Set up Bash script? or something to allow program to run in background but still be killable
 -----
+
+Oct 22 2020
+Set up WSL on server in order to kick off future cron job
+This will allow me to kill the script easily and won't be using Windows scheduled job
+Need to determine smooth way to get code over to server, maybe an automatic checkout from Github?
+
+Another idea of something to add: log data attached to each generate image outlining params
