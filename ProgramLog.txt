@@ -25,7 +25,9 @@ Set up WSL on server in order to kick off future cron job
 This will allow me to kill the script easily and won't be using Windows scheduled job
 Need to determine smooth way to get code over to server, maybe an automatic checkout from Github?
 
-Another idea of something to add: log data attached to each generate image outlining params
+Another idea of something to add:
+	- log data attached to each generate image outlining params
+	- low poly
 
 Site to grab images from for manipulation
 https://images.nga.gov/en/page/show_home_page.html

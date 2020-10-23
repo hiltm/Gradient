@@ -75,12 +75,13 @@ elif(randomnum==4):
 
     for x in range(50):
         cv.rectangle(img,(xaxis1,xaxis2),(yaxis1,yaxis2),(color1,color2,color3),thickness)
-        xaxis1=xaxis2 #shift over to last x-axis endpoint
+        xaxis1=xaxis1+100 #shift over to last x-axis endpoint
         xaxis2=xaxis2+100
     cv.imshow('repeat',img)
     filename=save_img(randomnum,img)
 
 tweet_image(filename)
+#insta_image(filename)
 
 #code to use eventually to vary up shape creation
 """
