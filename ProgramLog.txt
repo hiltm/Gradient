@@ -26,3 +26,10 @@ This will allow me to kill the script easily and won't be using Windows schedule
 Need to determine smooth way to get code over to server, maybe an automatic checkout from Github?
 
 Another idea of something to add: log data attached to each generate image outlining params
+
+Site to grab images from for manipulation
+https://images.nga.gov/en/page/show_home_page.html
+
+List of drawing functions for OpenCV
+https://docs.opencv.org/3.4/d6/d6e/group__imgproc__draw.html
+-----
