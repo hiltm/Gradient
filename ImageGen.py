@@ -3,6 +3,7 @@ import cv2 as cv
 import random
 from SaveImage import save_img
 from Twitter import *
+from PIL import Image
 
 xaxis=900
 yaxis=800
@@ -11,7 +12,7 @@ maxcolor=255
 
 #maximum number of image option
 maxoption=1
-randomnum=4#random.randint(0,maxoption)
+randomnum=2#random.randint(0,maxoption)
 print(randomnum)
 
 #completely randomized
@@ -48,7 +49,21 @@ elif(randomnum==1):
 
 #pixalate image
 elif(randomnum==2):
+    pixelsize=32 #TODO make this a 2^n exponential with n > 5 AND n < 10 for varying pixel size
+    imagefromfile="C:/Users/Hilt/Pictures/misfits.jpg"
     print("Not yet implented - image pixalization")
+
+    #open image saved on computer
+    img = Image.open(imagefromfile)
+
+    #resize smoothly down to XxX pixels
+    imgSmall = img.resize((pixelsize,pixelsize),resample=Image.BILINEAR)
+
+    #scale back up using nearest to original size
+    result = imgSmall.resize(img.size,Image.NEAREST)
+    result = np.uint8(result)
+    cv.imshow('pixel',result)
+    
 
 #drawing over image
 elif(randomnum==3):
