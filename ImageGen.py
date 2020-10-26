@@ -2,7 +2,7 @@ import numpy as np
 import cv2 as cv
 import random
 from SaveImage import save_img
-from Twitter import tweet_image
+from Twitter import *
 
 xaxis=900
 yaxis=800
@@ -80,7 +80,7 @@ elif(randomnum==4):
     cv.imshow('repeat',img)
     filename=save_img(randomnum,img)
 
-tweet_image(filename)
+#tweet_image(filename)
 #insta_image(filename)
 
 #code to use eventually to vary up shape creation

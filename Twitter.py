@@ -1,5 +1,5 @@
 from twython import Twython
-from instabot import Bot
+from instapy_cli import client
 from Keys import *
 
 twitter = Twython(
@@ -9,10 +9,6 @@ twitter = Twython(
     access_token_secret
 )
 
-bot = Bot()
-bot.login(username = "insta_username",
-          password = "insta_password")
-
 def tweet_image(filename):
     image = open(filename, 'rb')
     response = twitter.upload_media(media=image)
@@ -20,5 +16,7 @@ def tweet_image(filename):
     twitter.update_status(media_ids=media_id)
 
 def insta_image(filename):
-    bot.upload_photo(filename)
+    with client(insta_username, insta_password) as cli:
+        text = ''
+        cli.upload(filename, text)
 
